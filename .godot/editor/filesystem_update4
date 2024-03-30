@@ -1,3 +1,9 @@
 res://LevelTwo.tscn
 res://main.tscn
 res://LevelOne.tscn
+res://TurnAround.gd
+res://TurnAround1.gd
+res://TurnAround2.gd
+res://groundBody.tscn
+res://RedEnemyHitbox.gd
+res://GodotTheRobot.gd
