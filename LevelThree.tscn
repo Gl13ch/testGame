@@ -135,3 +135,5 @@ shape = SubResource("CircleShape2D_bh7ys")
 position = Vector2(648, 405)
 scale = Vector2(1, -0.33)
 script = null
+
+[connection signal="body_entered" from="BouncePad" to="GodotTheRobot2" method="_on_bounce_pad_body_entered"]

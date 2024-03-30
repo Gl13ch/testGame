@@ -142,3 +142,5 @@ script = ExtResource("11_x07a5")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RedEnemy/RedEnemyHitbox"]
 polygon = PackedVector2Array(-23, -40, -11, -45, -5, -35, 5, -35, 10, -45, 22, -41, 21, -30, 30, -23, 39, -28, 48, -17, 42, -9, 42, 25, 40, 31, 35, 37, 24, 43, 13, 45, -11, 45, -21, 43, -30, 40, -38, 34, -42, 27, -42, -9, -48, -17, -39, -28, -31, -23, -22, -30)
+
+[connection signal="body_entered" from="RedEnemy/RedEnemyHitbox" to="GodotTheRobot" method="_on_red_enemy_hitbox_body_entered"]
