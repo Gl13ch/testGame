@@ -1,3 +1,3 @@
-res://LevelTwo.tscn
-res://main.tscn
-res://LevelOne.tscn
+res://RedEnemy.gd
+res://bounce_pad.tscn
+res://BouncePad.gd
