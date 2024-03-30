@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://GodotTheRobot.gd" id="1_stmng"]
 [ext_resource type="Texture2D" uid="uid://cj0tqlh8alcmx" path="res://godotMan.png" id="2_w3nvg"]
 [ext_resource type="PackedScene" uid="uid://cy1lxrnngqnao" path="res://groundBody.tscn" id="3_2o6ni"]
-[ext_resource type="Texture2D" uid="uid://ch1eay34nwokc" path="res://icon.svg" id="3_rkurh"]
+[ext_resource type="Texture2D" uid="uid://b7jx6sm42gvou" path="res://icon.svg" id="3_rkurh"]
 [ext_resource type="Script" path="res://GodotYellowCoin.gd" id="4_obq22"]
 [ext_resource type="Texture2D" uid="uid://dj6vyribngqnb" path="res://godotYellow.png" id="5_sm616"]
 [ext_resource type="Script" path="res://RedEnemy.gd" id="6_2vbok"]

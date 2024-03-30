@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @export var SPEED = 300.0
 @export var JUMP_VELOCITY = -400.0
+var BOUNCE_VELOCITY = -1000.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -30,3 +31,10 @@ func _physics_process(delta):
 func _on_red_enemy_hitbox_body_entered(body):
 	get_tree().reload_current_scene()
 	#then send to spawn
+
+
+func _on_bounce_pad_body_entered(body):
+	if body == self:
+		velocity.y = BOUNCE_VELOCITY
+		print("bounce")
+		pass # Replace with function body.

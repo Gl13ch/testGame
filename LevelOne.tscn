@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://GodotTheRobot.gd" id="1_eh0op"]
 [ext_resource type="Texture2D" uid="uid://cj0tqlh8alcmx" path="res://godotMan.png" id="2_iyplv"]
-[ext_resource type="Texture2D" uid="uid://ch1eay34nwokc" path="res://icon.svg" id="2_t8xm5"]
+[ext_resource type="Texture2D" uid="uid://b7jx6sm42gvou" path="res://icon.svg" id="2_t8xm5"]
 [ext_resource type="Script" path="res://GodotYellowCoin.gd" id="4_3d2sa"]
 [ext_resource type="Texture2D" uid="uid://dj6vyribngqnb" path="res://godotYellow.png" id="5_4vgos"]
 
