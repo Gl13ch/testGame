@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b7jx6sm42gvou" path="res://icon.svg" id="4_m474h"]
 [ext_resource type="Script" path="res://GodotYellowCoin.gd" id="5_uv1b8"]
 [ext_resource type="Texture2D" uid="uid://dj6vyribngqnb" path="res://godotYellow.png" id="6_joqlr"]
-[ext_resource type="PackedScene" uid="uid://ckfjq85umb6nm" path="res://bounce_pad.tscn" id="7_wc1pv"]
+[ext_resource type="PackedScene" uid="uid://ciqbkdwu3r0jo" path="res://bounce_pad.tscn" id="7_wc1pv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y12if"]
 size = Vector2(159, 20)

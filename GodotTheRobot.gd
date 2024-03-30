@@ -29,7 +29,8 @@ func _physics_process(delta):
 
 
 func _on_red_enemy_hitbox_body_entered(body):
-	get_tree().reload_current_scene()
+	if body == self:
+		get_tree().reload_current_scene()
 	#then send to spawn
 
 
