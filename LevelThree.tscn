@@ -1,12 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://chb4w1up2ldnu"]
+[gd_scene load_steps=12 format=3 uid="uid://chb4w1up2ldnu"]
 
-[ext_resource type="Script" path="res://GodotTheRobot.gd" id="1_vaf1w"]
-[ext_resource type="Texture2D" uid="uid://cj0tqlh8alcmx" path="res://godotMan.png" id="2_bf8rc"]
+[ext_resource type="PackedScene" uid="uid://depdcntyt0g68" path="res://godot_the_robot.tscn" id="1_3annj"]
 [ext_resource type="PackedScene" uid="uid://cy1lxrnngqnao" path="res://groundBody.tscn" id="3_ml4xw"]
 [ext_resource type="Texture2D" uid="uid://b7jx6sm42gvou" path="res://icon.svg" id="4_m474h"]
 [ext_resource type="Script" path="res://GodotYellowCoin.gd" id="5_uv1b8"]
 [ext_resource type="Texture2D" uid="uid://dj6vyribngqnb" path="res://godotYellow.png" id="6_joqlr"]
-[ext_resource type="PackedScene" uid="uid://ckfjq85umb6nm" path="res://bounce_pad.tscn" id="7_wc1pv"]
+[ext_resource type="PackedScene" uid="uid://ciqbkdwu3r0jo" path="res://bounce_pad.tscn" id="7_wc1pv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y12if"]
 size = Vector2(159, 20)
@@ -25,22 +24,8 @@ size = Vector2(159, 20)
 [node name="LevelOne" type="Node2D"]
 position = Vector2(-1, 1)
 
-[node name="GodotTheRobot" type="CharacterBody2D" parent="."]
-position = Vector2(64, 572)
-script = ExtResource("1_vaf1w")
-JUMP_VELOCITY = -800.0
-metadata/_edit_group_ = true
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GodotTheRobot"]
-polygon = PackedVector2Array(-23, -40, -11, -45, -5, -35, 5, -35, 10, -45, 22, -41, 21, -30, 30, -23, 39, -28, 48, -17, 42, -9, 42, 25, 40, 31, 35, 37, 24, 43, 13, 45, -11, 45, -21, 43, -30, 40, -38, 34, -42, 27, -42, -9, -48, -17, -39, -28, -31, -23, -22, -30)
-
-[node name="Sprite2D" type="Sprite2D" parent="GodotTheRobot"]
-texture = ExtResource("2_bf8rc")
-
-[node name="Camera2D" type="Camera2D" parent="GodotTheRobot"]
-limit_left = -57
-limit_right = 1200
-limit_bottom = 637
+[node name="GodotTheRobot2" parent="." instance=ExtResource("1_3annj")]
+position = Vector2(64, 568)
 
 [node name="StaticBody2D" parent="." instance=ExtResource("3_ml4xw")]
 
@@ -150,5 +135,3 @@ shape = SubResource("CircleShape2D_bh7ys")
 position = Vector2(648, 405)
 scale = Vector2(1, -0.33)
 script = null
-
-[connection signal="body_entered" from="BouncePad" to="GodotTheRobot" method="_on_bounce_pad_body_entered"]

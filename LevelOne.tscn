@@ -1,7 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://dggwcevliepe3"]
+[gd_scene load_steps=7 format=3 uid="uid://dggwcevliepe3"]
 
-[ext_resource type="Script" path="res://GodotTheRobot.gd" id="1_eh0op"]
-[ext_resource type="Texture2D" uid="uid://cj0tqlh8alcmx" path="res://godotMan.png" id="2_iyplv"]
+[ext_resource type="PackedScene" uid="uid://depdcntyt0g68" path="res://godot_the_robot.tscn" id="1_t2pxh"]
 [ext_resource type="Texture2D" uid="uid://b7jx6sm42gvou" path="res://icon.svg" id="2_t8xm5"]
 [ext_resource type="Script" path="res://GodotYellowCoin.gd" id="4_3d2sa"]
 [ext_resource type="Texture2D" uid="uid://dj6vyribngqnb" path="res://godotYellow.png" id="5_4vgos"]
@@ -15,20 +14,8 @@ radius = 48.0104
 [node name="LevelOne" type="Node2D"]
 position = Vector2(-1, 1)
 
-[node name="GodotTheRobot" type="CharacterBody2D" parent="."]
-position = Vector2(342, 579)
-script = ExtResource("1_eh0op")
-JUMP_VELOCITY = -800.0
-metadata/_edit_group_ = true
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GodotTheRobot"]
-polygon = PackedVector2Array(-23, -40, -11, -45, -5, -35, 5, -35, 10, -45, 22, -41, 21, -30, 30, -23, 39, -28, 48, -17, 42, -9, 42, 25, 40, 31, 35, 37, 24, 43, 13, 45, -11, 45, -21, 43, -30, 40, -38, 34, -42, 27, -42, -9, -48, -17, -39, -28, -31, -23, -22, -30)
-
-[node name="Sprite2D" type="Sprite2D" parent="GodotTheRobot"]
-texture = ExtResource("2_iyplv")
-
-[node name="Camera2D" type="Camera2D" parent="GodotTheRobot"]
-limit_bottom = 637
+[node name="GodotTheRobot2" parent="." instance=ExtResource("1_t2pxh")]
+position = Vector2(249, 568)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(589, 637)

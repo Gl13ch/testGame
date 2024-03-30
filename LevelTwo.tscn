@@ -1,7 +1,6 @@
-[gd_scene load_steps=18 format=3 uid="uid://cqqubmpk8eee3"]
+[gd_scene load_steps=17 format=3 uid="uid://cqqubmpk8eee3"]
 
-[ext_resource type="Script" path="res://GodotTheRobot.gd" id="1_stmng"]
-[ext_resource type="Texture2D" uid="uid://cj0tqlh8alcmx" path="res://godotMan.png" id="2_w3nvg"]
+[ext_resource type="PackedScene" uid="uid://depdcntyt0g68" path="res://godot_the_robot.tscn" id="1_pyyr3"]
 [ext_resource type="PackedScene" uid="uid://cy1lxrnngqnao" path="res://groundBody.tscn" id="3_2o6ni"]
 [ext_resource type="Texture2D" uid="uid://b7jx6sm42gvou" path="res://icon.svg" id="3_rkurh"]
 [ext_resource type="Script" path="res://GodotYellowCoin.gd" id="4_obq22"]
@@ -31,22 +30,7 @@ size = Vector2(159, 20)
 [node name="LevelOne" type="Node2D"]
 position = Vector2(-1, 1)
 
-[node name="GodotTheRobot" type="CharacterBody2D" parent="."]
-position = Vector2(63, 579)
-script = ExtResource("1_stmng")
-JUMP_VELOCITY = -800.0
-metadata/_edit_group_ = true
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GodotTheRobot"]
-polygon = PackedVector2Array(-23, -40, -11, -45, -5, -35, 5, -35, 10, -45, 22, -41, 21, -30, 30, -23, 39, -28, 48, -17, 42, -9, 42, 25, 40, 31, 35, 37, 24, 43, 13, 45, -11, 45, -21, 43, -30, 40, -38, 34, -42, 27, -42, -9, -48, -17, -39, -28, -31, -23, -22, -30)
-
-[node name="Sprite2D" type="Sprite2D" parent="GodotTheRobot"]
-texture = ExtResource("2_w3nvg")
-
-[node name="Camera2D" type="Camera2D" parent="GodotTheRobot"]
-limit_left = -57
-limit_right = 1200
-limit_bottom = 637
+[node name="GodotTheRobot" parent="." instance=ExtResource("1_pyyr3")]
 
 [node name="StaticBody2D" parent="." instance=ExtResource("3_2o6ni")]
 
@@ -158,5 +142,3 @@ script = ExtResource("11_x07a5")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RedEnemy/RedEnemyHitbox"]
 polygon = PackedVector2Array(-23, -40, -11, -45, -5, -35, 5, -35, 10, -45, 22, -41, 21, -30, 30, -23, 39, -28, 48, -17, 42, -9, 42, 25, 40, 31, 35, 37, 24, 43, 13, 45, -11, 45, -21, 43, -30, 40, -38, 34, -42, 27, -42, -9, -48, -17, -39, -28, -31, -23, -22, -30)
-
-[connection signal="body_entered" from="RedEnemy/RedEnemyHitbox" to="GodotTheRobot" method="_on_red_enemy_hitbox_body_entered"]
