@@ -1,0 +1,5 @@
+RigidBody2D
+PathFollow2D
+Path2D
+CharacterBody2D
+RichTextLabel
