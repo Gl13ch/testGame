@@ -25,3 +25,8 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+
+func _on_red_enemy_hitbox_body_entered(body):
+	get_tree().reload_current_scene()
+	#then send to spawn
