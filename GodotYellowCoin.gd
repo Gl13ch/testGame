@@ -10,5 +10,6 @@ func _ready():
 func _process(delta):
 	if has_overlapping_bodies() == true:
 		queue_free()
+		get_tree().change_scene_to_file("res://LevelTwo.tscn")
 	
  
