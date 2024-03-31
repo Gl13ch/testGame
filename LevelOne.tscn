@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://dggwcevliepe3"]
+[gd_scene load_steps=10 format=3 uid="uid://dggwcevliepe3"]
 
 [ext_resource type="PackedScene" uid="uid://depdcntyt0g68" path="res://godot_the_robot.tscn" id="1_t2pxh"]
 [ext_resource type="Texture2D" uid="uid://b7jx6sm42gvou" path="res://icon.svg" id="2_t8xm5"]
 [ext_resource type="Script" path="res://GodotYellowCoin.gd" id="4_3d2sa"]
 [ext_resource type="Texture2D" uid="uid://dj6vyribngqnb" path="res://godotYellow.png" id="5_4vgos"]
+[ext_resource type="Script" path="res://Teleport1.gd" id="5_aehe6"]
+[ext_resource type="Script" path="res://Teleport2.gd" id="6_0tofh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y12if"]
 size = Vector2(159, 20)
@@ -12,12 +14,13 @@ size = Vector2(159, 20)
 radius = 48.0104
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0s77e"]
+size = Vector2(4.75, 114)
 
 [node name="LevelOne" type="Node2D"]
 position = Vector2(-1, 1)
 
 [node name="GodotTheRobot2" parent="." instance=ExtResource("1_t2pxh")]
-position = Vector2(182, 570)
+position = Vector2(161, 576)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(589, 637)
@@ -34,7 +37,7 @@ scale = Vector2(1.24219, 0.15625)
 texture = ExtResource("2_t8xm5")
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="."]
-position = Vector2(1199, 8)
+position = Vector2(1193, -108)
 rotation = 1.5708
 scale = Vector2(8, 1)
 metadata/_edit_group_ = true
@@ -49,7 +52,7 @@ scale = Vector2(1.24219, 0.15625)
 texture = ExtResource("2_t8xm5")
 
 [node name="StaticBody2D7" type="StaticBody2D" parent="."]
-position = Vector2(-57, 7)
+position = Vector2(-56, -110)
 rotation = 1.5708
 scale = Vector2(8, 1)
 metadata/_edit_group_ = true
@@ -129,6 +132,22 @@ position = Vector2(0, 2)
 shape = SubResource("CircleShape2D_l17g7")
 
 [node name="Teleport1" type="Area2D" parent="."]
+position = Vector2(-61, 567)
+script = ExtResource("5_aehe6")
+metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Teleport1"]
+position = Vector2(-3.625, 0)
 shape = SubResource("RectangleShape2D_0s77e")
+
+[node name="Teleport2" type="Area2D" parent="."]
+position = Vector2(1201, 568)
+script = ExtResource("6_0tofh")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teleport2"]
+position = Vector2(-0.25, 0)
+shape = SubResource("RectangleShape2D_0s77e")
+
+[connection signal="body_entered" from="Teleport1" to="Teleport1" method="_on_body_entered"]
+[connection signal="body_entered" from="Teleport2" to="Teleport2" method="_on_body_entered"]
