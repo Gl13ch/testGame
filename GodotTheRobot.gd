@@ -4,9 +4,15 @@ extends CharacterBody2D
 @export var JUMP_VELOCITY = -400.0
 var BOUNCE_VELOCITY = -1000.0
 @onready var animation_player = $AnimationPlayer
+@onready var sprite_2d = $Sprite2D
+
+var flipx = 1
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+
+func _ready():
+	animation_player.set_default_blend_time(.2)
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -25,6 +31,15 @@ func _physics_process(delta):
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+	
+	if velocity.x != 0 and is_on_floor():
+		if velocity.x > 0:
+			animation_player.play("walk_r")
+		else:
+			animation_player.play("walk_l")
+	else:
+		if animation_player.current_animation != "idle":
+			animation_player.play("idle")
 
 	move_and_slide()
 
@@ -40,4 +55,3 @@ func _on_bounce_pad_body_entered(body):
 		velocity.y = BOUNCE_VELOCITY
 		animation_player.play("bouncepad_launch")
 		print("bounce")
-		pass # Replace with function body.
