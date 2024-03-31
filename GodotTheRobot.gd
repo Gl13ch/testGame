@@ -5,6 +5,7 @@ extends CharacterBody2D
 var BOUNCE_VELOCITY = -1000.0
 @onready var animation_player = $AnimationPlayer
 @onready var sprite_2d = $Sprite2D
+var grounded = false
 
 var flipx = 1
 
@@ -18,6 +19,13 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
+		if grounded:
+			grounded = false
+	
+	if !grounded and is_on_floor():
+		grounded = true
+		print("land")
+		animation_player.play("on_land")
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
