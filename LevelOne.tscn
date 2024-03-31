@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dggwcevliepe3"]
+[gd_scene load_steps=8 format=3 uid="uid://dggwcevliepe3"]
 
 [ext_resource type="PackedScene" uid="uid://depdcntyt0g68" path="res://godot_the_robot.tscn" id="1_t2pxh"]
 [ext_resource type="Texture2D" uid="uid://b7jx6sm42gvou" path="res://icon.svg" id="2_t8xm5"]
@@ -11,11 +11,13 @@ size = Vector2(159, 20)
 [sub_resource type="CircleShape2D" id="CircleShape2D_l17g7"]
 radius = 48.0104
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0s77e"]
+
 [node name="LevelOne" type="Node2D"]
 position = Vector2(-1, 1)
 
 [node name="GodotTheRobot2" parent="." instance=ExtResource("1_t2pxh")]
-position = Vector2(249, 568)
+position = Vector2(182, 570)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(589, 637)
@@ -125,3 +127,8 @@ texture = ExtResource("5_4vgos")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GodotYellowCoin"]
 position = Vector2(0, 2)
 shape = SubResource("CircleShape2D_l17g7")
+
+[node name="Teleport1" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teleport1"]
+shape = SubResource("RectangleShape2D_0s77e")
