@@ -6,6 +6,7 @@ var levels = [
 	"res://LevelOne.tscn",
 	"res://LevelTwo.tscn",
 	"res://LevelThree.tscn",
+	"res://LevelFour.tscn",
 	# Add as many levels as you have
 ]
 
