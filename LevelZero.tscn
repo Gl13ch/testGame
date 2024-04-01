@@ -1,0 +1,108 @@
+[gd_scene load_steps=8 format=3 uid="uid://niaxoqpx6d8e"]
+
+[ext_resource type="PackedScene" uid="uid://depdcntyt0g68" path="res://godot_the_robot.tscn" id="1_g0xeo"]
+[ext_resource type="Texture2D" uid="uid://b7jx6sm42gvou" path="res://icon.svg" id="2_cdhvs"]
+[ext_resource type="Script" path="res://GodotYellowCoin.gd" id="3_jymum"]
+[ext_resource type="Texture2D" uid="uid://dj6vyribngqnb" path="res://godotYellow.png" id="4_2j43s"]
+[ext_resource type="PackedScene" uid="uid://b0imux73oevll" path="res://teleport.tscn" id="5_56wra"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y12if"]
+size = Vector2(160, 20)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l17g7"]
+radius = 48.0104
+
+[node name="LevelOne" type="Node2D"]
+position = Vector2(-1, 1)
+
+[node name="GodotTheRobot2" parent="." instance=ExtResource("1_g0xeo")]
+position = Vector2(161, 576)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(589, 637)
+scale = Vector2(8, 1)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-2.5, 0)
+shape = SubResource("RectangleShape2D_y12if")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(-2, 0)
+scale = Vector2(1.24219, 0.15625)
+texture = ExtResource("2_cdhvs")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="."]
+position = Vector2(1193, -108)
+rotation = 1.5708
+scale = Vector2(8, 1)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6"]
+position = Vector2(-2.5, 0)
+shape = SubResource("RectangleShape2D_y12if")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D6"]
+position = Vector2(-2, 0)
+scale = Vector2(1.24219, 0.15625)
+texture = ExtResource("2_cdhvs")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="."]
+position = Vector2(-56, -110)
+rotation = 1.5708
+scale = Vector2(8, 1)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7"]
+position = Vector2(-2.5, 0)
+shape = SubResource("RectangleShape2D_y12if")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D7"]
+position = Vector2(-2, 0)
+scale = Vector2(1.24219, 0.15625)
+texture = ExtResource("2_cdhvs")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(885, 439)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(-2.5, 0)
+shape = SubResource("RectangleShape2D_y12if")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D3"]
+position = Vector2(-2, 0)
+scale = Vector2(1.24219, 0.15625)
+texture = ExtResource("2_cdhvs")
+
+[node name="Platform" type="StaticBody2D" parent="."]
+position = Vector2(477, 183)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_y12if")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform"]
+position = Vector2(-1.25001, 0)
+scale = Vector2(1.24609, 0.15625)
+texture = ExtResource("2_cdhvs")
+
+[node name="GodotYellowCoin" type="Area2D" parent="."]
+position = Vector2(481, 110)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("3_jymum")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="GodotYellowCoin"]
+texture = ExtResource("4_2j43s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GodotYellowCoin"]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_l17g7")
+
+[node name="Teleport1" parent="." instance=ExtResource("5_56wra")]
+
+[node name="Teleport2" parent="." instance=ExtResource("5_56wra")]
+position = Vector2(1203, 568)
+target = Vector2(13, 576)

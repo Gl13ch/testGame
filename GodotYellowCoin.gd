@@ -7,9 +7,10 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if has_overlapping_bodies() == true:
 		queue_free()
-		get_tree().change_scene_to_file("res://LevelTwo.tscn")
+		LevelManager.load_next_level()
+		
 	
  
