@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://depdcntyt0g68" path="res://godot_the_robot.tscn" id="1_p5bsf"]
 [ext_resource type="Texture2D" uid="uid://b7jx6sm42gvou" path="res://icon.svg" id="2_5yqt8"]
-[ext_resource type="Script" path="res://Spikes.gd" id="3_8s17d"]
+[ext_resource type="PackedScene" uid="uid://nv0osy3ensfy" path="res://spikes.tscn" id="3_fx6vw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xt4ah"]
 size = Vector2(160, 20)
@@ -43,71 +43,6 @@ shape = SubResource("RectangleShape2D_dqjo7")
 [node name="Sprite2D" type="Sprite2D" parent="Ground"]
 texture = ExtResource("2_5yqt8")
 
-[node name="Spikes" type="Area2D" parent="."]
-position = Vector2(426, 640)
-script = ExtResource("3_8s17d")
-metadata/_edit_group_ = true
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Spikes"]
-position = Vector2(-3.19073, 1)
-scale = Vector2(0.726285, 1)
-polygon = PackedVector2Array(-19, 7, 0, -15, 17, 7)
-metadata/_edit_group_ = true
-
-[node name="Polygon2D" type="Polygon2D" parent="Spikes/CollisionPolygon2D"]
-color = Color(0.278431, 0.54902, 0.74902, 1)
-polygon = PackedVector2Array(-19, 7, 0, -15, 17, 7)
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Spikes"]
-position = Vector2(22.8093, 1)
-scale = Vector2(0.726285, 1)
-polygon = PackedVector2Array(-19, 7, 0, -15, 17, 7)
-metadata/_edit_group_ = true
-
-[node name="Polygon2D" type="Polygon2D" parent="Spikes/CollisionPolygon2D2"]
-color = Color(0.278431, 0.54902, 0.74902, 1)
-polygon = PackedVector2Array(-19, 7, 0, -15, 17, 7)
-
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Spikes"]
-position = Vector2(48.8093, 1)
-scale = Vector2(0.726285, 1)
-polygon = PackedVector2Array(-19, 7, 0, -15, 17, 7)
-metadata/_edit_group_ = true
-
-[node name="Polygon2D" type="Polygon2D" parent="Spikes/CollisionPolygon2D3"]
-color = Color(0.278431, 0.54902, 0.74902, 1)
-polygon = PackedVector2Array(-19, 7, 0, -15, 17, 7)
-
-[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Spikes"]
-position = Vector2(74.8093, 1)
-scale = Vector2(0.726285, 1)
-polygon = PackedVector2Array(-19, 7, 0, -15, 17, 7)
-metadata/_edit_group_ = true
-
-[node name="Polygon2D" type="Polygon2D" parent="Spikes/CollisionPolygon2D4"]
-color = Color(0.278431, 0.54902, 0.74902, 1)
-polygon = PackedVector2Array(-19, 7, 0, -15, 17, 7)
-
-[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Spikes"]
-position = Vector2(100.809, 1)
-scale = Vector2(0.726285, 1)
-polygon = PackedVector2Array(-19, 7, 0, -15, 17, 7)
-metadata/_edit_group_ = true
-
-[node name="Polygon2D" type="Polygon2D" parent="Spikes/CollisionPolygon2D5"]
-color = Color(0.278431, 0.54902, 0.74902, 1)
-polygon = PackedVector2Array(-19, 7, 0, -15, 17, 7)
-
-[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Spikes"]
-position = Vector2(126.809, 1)
-scale = Vector2(0.726285, 1)
-polygon = PackedVector2Array(-19, 7, 0, -15, 17, 7)
-metadata/_edit_group_ = true
-
-[node name="Polygon2D" type="Polygon2D" parent="Spikes/CollisionPolygon2D6"]
-color = Color(0.278431, 0.54902, 0.74902, 1)
-polygon = PackedVector2Array(-19, 7, 0, -15, 17, 7)
-
 [node name="Wall_L" type="StaticBody2D" parent="."]
 position = Vector2(-403, 310)
 scale = Vector2(6, 6)
@@ -130,4 +65,5 @@ shape = SubResource("RectangleShape2D_2ynbh")
 [node name="Sprite2D" type="Sprite2D" parent="Wall_R"]
 texture = ExtResource("2_5yqt8")
 
-[connection signal="body_entered" from="Spikes" to="Spikes" method="_on_body_entered"]
+[node name="Spikes" parent="." instance=ExtResource("3_fx6vw")]
+position = Vector2(238, 473)
