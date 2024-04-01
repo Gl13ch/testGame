@@ -1,0 +1,70 @@
+[gd_scene load_steps=2 format=3 uid="uid://nv0osy3ensfy"]
+
+[ext_resource type="Script" path="res://Spikes.gd" id="1_e200c"]
+
+[node name="Spikes" type="Area2D"]
+position = Vector2(308, 371)
+script = ExtResource("1_e200c")
+metadata/_edit_group_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-3.19073, 1)
+scale = Vector2(0.726285, 1)
+polygon = PackedVector2Array(-19, 7, 0, -15, 17, 7)
+metadata/_edit_group_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="CollisionPolygon2D"]
+color = Color(0.278431, 0.54902, 0.74902, 1)
+polygon = PackedVector2Array(-19, 7, 0, -15, 17, 7)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+position = Vector2(22.8093, 1)
+scale = Vector2(0.726285, 1)
+polygon = PackedVector2Array(-19, 7, 0, -15, 17, 7)
+metadata/_edit_group_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="CollisionPolygon2D2"]
+color = Color(0.278431, 0.54902, 0.74902, 1)
+polygon = PackedVector2Array(-19, 7, 0, -15, 17, 7)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="."]
+position = Vector2(48.8093, 1)
+scale = Vector2(0.726285, 1)
+polygon = PackedVector2Array(-19, 7, 0, -15, 17, 7)
+metadata/_edit_group_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="CollisionPolygon2D3"]
+color = Color(0.278431, 0.54902, 0.74902, 1)
+polygon = PackedVector2Array(-19, 7, 0, -15, 17, 7)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="."]
+position = Vector2(74.8093, 1)
+scale = Vector2(0.726285, 1)
+polygon = PackedVector2Array(-19, 7, 0, -15, 17, 7)
+metadata/_edit_group_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="CollisionPolygon2D4"]
+color = Color(0.278431, 0.54902, 0.74902, 1)
+polygon = PackedVector2Array(-19, 7, 0, -15, 17, 7)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="."]
+position = Vector2(100.809, 1)
+scale = Vector2(0.726285, 1)
+polygon = PackedVector2Array(-19, 7, 0, -15, 17, 7)
+metadata/_edit_group_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="CollisionPolygon2D5"]
+color = Color(0.278431, 0.54902, 0.74902, 1)
+polygon = PackedVector2Array(-19, 7, 0, -15, 17, 7)
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="."]
+position = Vector2(126.809, 1)
+scale = Vector2(0.726285, 1)
+polygon = PackedVector2Array(-19, 7, 0, -15, 17, 7)
+metadata/_edit_group_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="CollisionPolygon2D6"]
+color = Color(0.278431, 0.54902, 0.74902, 1)
+polygon = PackedVector2Array(-19, 7, 0, -15, 17, 7)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
