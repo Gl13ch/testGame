@@ -1,10 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://niaxoqpx6d8e"]
+[gd_scene load_steps=8 format=3 uid="uid://cv7qpp4vni025"]
 
 [ext_resource type="PackedScene" uid="uid://depdcntyt0g68" path="res://godot_the_robot.tscn" id="1_g0xeo"]
 [ext_resource type="Texture2D" uid="uid://b7jx6sm42gvou" path="res://icon.svg" id="2_cdhvs"]
 [ext_resource type="Script" path="res://GodotYellowCoin.gd" id="3_jymum"]
 [ext_resource type="Texture2D" uid="uid://dj6vyribngqnb" path="res://godotYellow.png" id="4_2j43s"]
-[ext_resource type="PackedScene" uid="uid://b0imux73oevll" path="res://teleport.tscn" id="5_56wra"]
+[ext_resource type="PackedScene" uid="uid://hgd8uqjwxoxy" path="res://teleport.tscn" id="5_56wra"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y12if"]
 size = Vector2(160, 20)

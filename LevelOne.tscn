@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b7jx6sm42gvou" path="res://icon.svg" id="2_t8xm5"]
 [ext_resource type="Script" path="res://GodotYellowCoin.gd" id="4_3d2sa"]
 [ext_resource type="Texture2D" uid="uid://dj6vyribngqnb" path="res://godotYellow.png" id="5_4vgos"]
-[ext_resource type="PackedScene" uid="uid://b0imux73oevll" path="res://teleport.tscn" id="5_b523h"]
+[ext_resource type="PackedScene" uid="uid://hgd8uqjwxoxy" path="res://teleport.tscn" id="5_b523h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y12if"]
 size = Vector2(160, 20)

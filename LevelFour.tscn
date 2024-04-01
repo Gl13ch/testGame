@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://5tm52upptrdi"]
+[gd_scene load_steps=13 format=3 uid="uid://bwbvrjnmlyhnm"]
 
 [ext_resource type="PackedScene" uid="uid://depdcntyt0g68" path="res://godot_the_robot.tscn" id="1_rucuf"]
 [ext_resource type="PackedScene" uid="uid://cy1lxrnngqnao" path="res://groundBody.tscn" id="2_j1bp8"]
